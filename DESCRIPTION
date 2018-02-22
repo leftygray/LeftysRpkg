@@ -1,0 +1,10 @@
+Package: LeftysRpkg
+Title: Leftygray's Personal R Package
+Version: 0.0.0.9000
+Authors@R: person("Richard", "Gray", email = "Rgray@kirby.unsw.edu.au", role = c("aut", "cre"))
+Description: This package is my personal R package for storing useful R functions and other related materials. It is very much a work in progress. 
+Depends: R (>= 3.4.3)
+License: None yet
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.0.1
