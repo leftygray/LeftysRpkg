@@ -1,11 +1,10 @@
-#` A function to specify ggplot options
-#`
-#` This function stores all my favoured plotting options and themes for
-#` ggplot plots
-#
-#' @param package character string (unquoted) specifying name of package
+#' A function to specify ggplot options
 #'
-#' @return none
+#' This function stores all my favoured plotting options and themes for
+#' ggplot plots
+#'
+#' @param opt name of option to use in plot
+#' @return ggplot theme options object
 #'
 #' @author Richard T. Gray, \email{Rgray@kirby.unsw.edu.au}
 #'
@@ -13,11 +12,15 @@
 #' PlotOptions()
 #'
 #' @export
+#' @import ggplot2
 #'
-PlotOptions <- function() {
+PlotOptions <- function(opt=c("main")) {
+
+
+  opt <- match.arg(opt)
 
   # Baseline theme for plot variables
-  plotOpts <- theme_bw() + theme(text = element_text(face = "bold",size=12,colour="black"),
+  main <- theme_bw() + theme(text = element_text(face = "bold",size=12,colour="black"),
     axis.text.x = element_text(face = "plain",size=10,colour="black"),
     axis.text.y = element_text(face = "plain",size=10,colour="black"),
     axis.line.x = element_line(colour = "black"),
@@ -36,6 +39,9 @@ PlotOptions <- function() {
   )
 
   # Return theme
+  plotOpts <- switch(match.arg(opt),
+    main=main)
+
   return(plotOpts)
 
 }

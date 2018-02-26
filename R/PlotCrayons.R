@@ -21,8 +21,8 @@
 #' @importFrom grDevices rgb2hsv
 #' @importFrom graphics par plot rect text
 #'
-plot_crayons <-
-  function(method2order=c("hsv", "cluster"), cex=0.6, mar=rep(0.1, 4))
+PlotCrayons <- function(method2order=c("hsv", "cluster"),
+  cex=0.6, mar=rep(0.1, 4))
   {
     method2order <- match.arg(method2order)
 

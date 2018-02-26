@@ -13,15 +13,14 @@
 #' @author Richard T Gray, \email{Rgray@kirby.unsw.edu.au}
 #' @references \url{https://github.com/kbroman/pkg_primer/blob/gh-pages/example/stage5/R/brocolors.R}
 #' @references \url{http://en.wikipedia.org/wiki/List_of_Crayola_crayon_colors}
-#' @seealso \code{\link{PlotOptions}}
-#' @seealso \code{\link{LineOptions}}
+#' @seealso \code{\link{PlotCrayons}}
+# @seealso \code{\link{LineOptions}}
 #'
 #' @examples
-#' PlotColours()
+#' PlotColors()
 #'
 #' @export
 #'
-
 PlotColors <- function(set = c("main", "lines", "cbPalette", "hivcascade4",
   "hivcascade5", "crayons")) {
 
