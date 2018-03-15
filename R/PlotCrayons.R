@@ -1,5 +1,8 @@
-#' Illustration of crayon colors (copy of Karl Broman's function)
-#'
+#' Illustration of crayon colors which is a copy of Karl Broman's function
+#' 
+#' Copyright (C) 2018 Karl Broman
+#' GNU General Public License, version 3, available at https://www.r-project.org/Licenses/GPL-3
+#' 
 #' This function Creates a plot of the crayon colors in \code{\link{PlotColors}}
 #'
 #' @param method2order method to order colors (\code{"hsv"} or \code{"cluster"})
