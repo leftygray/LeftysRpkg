@@ -1,36 +1,38 @@
-## PackageCitations.R
+#' A function to get the citations of packages
+#'
+#' This function outputs the package citation information of a package
+#' or all packages loaded in the current session.
+#'
+#' @param packages Vector of package names we want to cite. If "all" display all
+#' packages loaded.
+#' @param bibtex If TRUE display bibtex citation only.
+#' @param file If specified (default is NULL) is a String giving the file path
+#' and name.
+#'
+#' @return Returns a list of the citation information and outputs a bibtex file
+#' if requested.
+#'
+#' @author Richard T Gray, \email{Rgray@kirby.unsw.edu.au}
+#' @references \url{http://www.carlboettiger.info/2012/03/20/citing-r-packages.html}
+#'
+#' @examples
+#' PackageCitation("all")
+#'
+#' @export
+#'
+PackageCitation <- function(packages, bibtex = FALSE, file = NULL){
 
-# This personal function is used to list all the packages loaded during a 
-# session and provide their citation. 
-
-# Richard T. Gray (based on http://www.carlboettiger.info/2012/03/20/citing-r-packages.html)
-
-PackageCitation <- function(packages, bibtex = FALSE, file = NULL){ 
-  # This function outputs the package citation information of a package
-  # or all packages loaded in the current session. 
-  
-  # Args:
-  #   packages: Vector of package names we want to cite. If "all" display 
-  #     all packages loaded. 
-  #   bibtex: If TRUE display bibtex citation only. 
-  #     
-  #   Returns:
-  #     Returns a list of the citation information and outputs a bibtex 
-  #       file if requested.  
-  #       
-  # -----------------------------------------------------------------------
-  
   # Generate list of package citations
   if (length(packages) == 1) {
     if (packages != "all") {
-      output <- ifelse(bibtex, toBibtex(citation(packages)), 
+      output <- ifelse(bibtex, toBibtex(citation(packages)),
                        citation(packages))
     } else {
       if (bibtex) {
-        output <- sapply(names(sessionInfo()$otherPkgs), 
+        output <- sapply(names(sessionInfo()$otherPkgs),
                        function(x) toBibtex(citation(x)))
       } else {
-        output <- sapply(names(sessionInfo()$otherPkgs), 
+        output <- sapply(names(sessionInfo()$otherPkgs),
                          function(x) citation(x))
       }
     }
