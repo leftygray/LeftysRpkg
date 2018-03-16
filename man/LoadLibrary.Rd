@@ -7,7 +7,7 @@
 LoadLibrary(package)
 }
 \arguments{
-\item{package}{character string (unquoted) specifying name of package}
+\item{package}{Character string (unquoted) specifying name of package}
 }
 \value{
 none

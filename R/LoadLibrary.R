@@ -4,7 +4,7 @@
 #' and then attempts to install the package if it is unavailable. By rights 
 #' should be called LoadPackage.
 #'
-#' @param package character string (unquoted) specifying name of package
+#' @param package Character string (unquoted) specifying name of package
 #' 
 #' @return none
 #' 

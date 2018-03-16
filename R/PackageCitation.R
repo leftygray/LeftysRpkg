@@ -1,12 +1,13 @@
 #' A function to get the citations of packages
 #'
 #' This function outputs the package citation information of a package
-#' or all packages loaded in the current session.
+#' or all packages loaded in the current session. It is based on a post by 
+#' Carl Boettinger referenced below. 
 #'
 #' @param packages Vector of package names we want to cite. If "all" display all
 #' packages loaded.
 #' @param bibtex If TRUE display bibtex citation only.
-#' @param file If specified (default is NULL) is a String giving the file path
+#' @param file If specified is a string giving the file path
 #' and name.
 #'
 #' @return Returns a list of the citation information and outputs a bibtex file

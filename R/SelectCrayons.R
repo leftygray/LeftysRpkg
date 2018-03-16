@@ -8,9 +8,9 @@
 #' https://github.com/kbroman/pkg_primer/blob/gh-pages/example/stage5/R/brocolors.R
 #'
 #' @param color_names Optional vector of color names; can be partial matches.
-#' @param ... Additional optional color names
+#' @param ... Additional optional color names.
 #'
-#' @return Vector of named RGB colors
+#' @return Vector of named RGB colors.
 #'
 #' @references \url{http://en.wikipedia.org/wiki/List_of_Crayola_crayon_colors}
 #' @references \url{https://github.com/kbroman/broman/blob/master/R/brocolors.R}

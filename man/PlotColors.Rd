@@ -14,6 +14,10 @@ PlotColors(set = c("main", "lines", "cbPalette", "hivcascade4", "hivcascade5",
 Vector of character strings representing the chosen set of colors, in RGB.
 }
 \description{
+Copyright (C) 2018 Karl Broman
+GNU General Public License, version 3, available at https://www.r-project.org/Licenses/GPL-3
+}
+\details{
 This function Creates different vectors of colors that I use for plots. It
 was inspired by Karl Broman's brocolors.R function:
 https://github.com/kbroman/pkg_primer/blob/gh-pages/example/stage5/R/brocolors.R

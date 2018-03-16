@@ -5,10 +5,10 @@
 #'
 #' @param myggplot ggplot plot object
 #'
-#' @returns legend object as a separate plot object
+#' @return Legend object as a separate plot object.
 #'
 #' @author Richard T Gray, \email{Rgray@kirby.unsw.edu.au}
-#' @references \url{http://www.sthda.com/english/wiki/ggplot2-easy-way-to-mix-multiple-graphs-on-the-same-page-r-software-and-data-visualization#change-legend-position
+#' @references \url{http://www.sthda.com/english/wiki/ggplot2-easy-way-to-mix-multiple-graphs-on-the-same-page-r-software-and-data-visualization#change-legend-position}
 #'
 #' @export
 #' @import ggplot2

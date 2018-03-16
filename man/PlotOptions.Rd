@@ -7,14 +7,14 @@
 PlotOptions(opt = c("main"))
 }
 \arguments{
-\item{opt}{name of option to use in plot}
+\item{opt}{Name of option to use in plot.}
 }
 \value{
-ggplot theme options object
+ggplot theme options object.
 }
 \description{
 This function stores all my favoured plotting options and themes for
-ggplot plots
+ggplot plots.
 }
 \examples{
 PlotOptions()

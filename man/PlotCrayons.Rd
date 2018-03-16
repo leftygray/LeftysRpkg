@@ -2,22 +2,26 @@
 % Please edit documentation in R/PlotCrayons.R
 \name{PlotCrayons}
 \alias{PlotCrayons}
-\title{Illustration of crayon colors (copy of Karl Broman's function)}
+\title{Illustration of crayon colors which is a copy of Karl Broman's function}
 \usage{
 PlotCrayons(method2order = c("hsv", "cluster"), cex = 0.6, mar = rep(0.1,
   4))
 }
 \arguments{
-\item{method2order}{method to order colors (\code{"hsv"} or \code{"cluster"})}
+\item{method2order}{Method to order colors (\code{"hsv"} or \code{"cluster"})}
 
-\item{cex}{character expansion for the text}
+\item{cex}{Character expansion for the text}
 
-\item{mar}{margin paramaters; vector of length 4 (see \code{\link[graphics]{par}})}
+\item{mar}{Margin paramaters; vector of length 4 (see \code{\link[graphics]{par}})}
 }
 \value{
 None. Produces a plot.
 }
 \description{
+Copyright (C) 2018 Karl Broman
+GNU General Public License, version 3, available at https://www.r-project.org/Licenses/GPL-3
+}
+\details{
 This function Creates a plot of the crayon colors in \code{\link{PlotColors}}
 }
 \examples{

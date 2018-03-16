@@ -1,10 +1,10 @@
 #' A function to specify ggplot options
 #'
 #' This function stores all my favoured plotting options and themes for
-#' ggplot plots
+#' ggplot plots.
 #'
-#' @param opt name of option to use in plot
-#' @return ggplot theme options object
+#' @param opt Name of option to use in plot.
+#' @return ggplot theme options object.
 #'
 #' @author Richard T. Gray, \email{Rgray@kirby.unsw.edu.au}
 #'

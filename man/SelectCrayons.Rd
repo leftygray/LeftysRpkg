@@ -9,12 +9,16 @@ SelectCrayons(color_names = NULL, ...)
 \arguments{
 \item{color_names}{Optional vector of color names; can be partial matches.}
 
-\item{...}{Additional optional color names}
+\item{...}{Additional optional color names.}
 }
 \value{
-Vector of named RGB colors
+Vector of named RGB colors.
 }
 \description{
+Copyright (C) 2018 Karl Broman
+GNU General Public License, version 3, available at https://www.r-project.org/Licenses/GPL-3
+}
+\details{
 Vector of colors selected from Crayola crayons. It is essentially a copy 
 (with some minor tweaks) from Karl Broman's brocolors.R function:
 https://github.com/kbroman/pkg_primer/blob/gh-pages/example/stage5/R/brocolors.R
