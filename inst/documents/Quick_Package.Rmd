@@ -1,0 +1,37 @@
+# Quick instructions for package workflow #
+
+This document provides a quick resource and basic instructions for working on
+package development. 
+
+
+```{r}
+# Restard R and set working directory to this file location
+install.packages("devtools")
+library(devtools)
+devtools::install_github("klutometis/roxygen")
+library(roxygen2)
+```
+
+
+
+
+```{r}
+#setwd("./LeftysRpkg") - set working directory to source file location
+setwd(file.path(dirname(dirname(getwd()))))
+getwd()
+devtools::document()
+```
+
+
+
+```{r}
+setwd("..")
+devtools::install("LeftysRpkg")
+```
+
+
+## To load documents
+
+```{r}
+system.file()
+```
