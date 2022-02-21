@@ -4,11 +4,22 @@
 \alias{FormatData}
 \title{Format results for documents and manuscripts}
 \usage{
-FormatData(estimate, lower = NA, upper = NA, places = NULL,
-  prefix = "", suffix = "", units = "", rangestr = "",
-  rangeto = "<U+2012>", rangebracket = c(" (", ")"),
-  rangeappend = c("single", "both"), thousands = c(",", " "),
-  decimal = c("low", "mid"), tail = "")
+FormatData(
+  estimate,
+  lower = NA,
+  upper = NA,
+  places = NULL,
+  prefix = "",
+  suffix = "",
+  units = "",
+  rangestr = "",
+  rangeto = "-",
+  rangebracket = c(" (", ")"),
+  rangeappend = c("single", "both"),
+  thousands = c(",", " "),
+  decimal = c("low", "mid"),
+  tail = ""
+)
 }
 \arguments{
 \item{estimate}{Numeric value we are reporting.}

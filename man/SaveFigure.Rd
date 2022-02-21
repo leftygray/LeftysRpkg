@@ -4,8 +4,16 @@
 \alias{SaveFigure}
 \title{Wrapper function to save ggplots}
 \usage{
-SaveFigure(folder, filename, figure, format = ".png", width = 15,
-  height = 10, units = "cm", ...)
+SaveFigure(
+  folder,
+  filename,
+  figure,
+  format = ".png",
+  width = 15,
+  height = 10,
+  units = "cm",
+  ...
+)
 }
 \arguments{
 \item{folder}{Character string for the folder where figure will be saved.}

@@ -4,8 +4,7 @@
 \alias{PlotCrayons}
 \title{Illustration of crayon colors which is a copy of Karl Broman's function}
 \usage{
-PlotCrayons(method2order = c("hsv", "cluster"), cex = 0.6,
-  mar = rep(0.1, 4))
+PlotCrayons(method2order = c("hsv", "cluster"), cex = 0.6, mar = rep(0.1, 4))
 }
 \arguments{
 \item{method2order}{Method to order colors (\code{"hsv"} or \code{"cluster"})}
