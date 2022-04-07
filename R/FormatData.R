@@ -112,12 +112,12 @@ FormatData <- function(estimate, lower = NA, upper = NA, places = NULL,
   
   # Convert values and range into strings - TODO may need to add format as 
   # a variable to specify scientific notation. 
-  estStr <- formatC(estValue, digits = estPlaces, big.mark = thousands, 
-    decimal.mark = decimal, format = "fg")
-  lowStr <- ifelse(is.na(lowValue), "", formatC(lowValue, digits = lowPlaces,
-    big.mark = thousands, decimal.mark = decimal, format = "fg"))
-  upStr <- ifelse(is.na(upValue), "", formatC(upValue, digits = upPlaces,
-    big.mark = thousands, decimal.mark = decimal, format = "fg"))
+  estStr <- formatC(estimate, digits = estPlaces, big.mark = thousands, 
+    decimal.mark = decimal, format = "f")
+  lowStr <- ifelse(is.na(lower), "", formatC(lower, digits = lowPlaces,
+    big.mark = thousands, decimal.mark = decimal, format = "f"))
+  upStr <- ifelse(is.na(upper), "", formatC(upper, digits = upPlaces,
+    big.mark = thousands, decimal.mark = decimal, format = "f"))
   
   # Add suffixes and prefixes
   if (units != "") {
