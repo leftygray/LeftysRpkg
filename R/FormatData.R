@@ -99,25 +99,24 @@ FormatData <- function(estimate, lower = NA, upper = NA, places = NULL,
     }
     
     # Round estimate and range depending on value
-    estValue <- round(estimate, ValuePlaces(estimate))
-    lowValue <- round(lower, ValuePlaces(lower))
-    upValue <- round(upper, ValuePlaces(upper))
+    estPlaces <- ValuePlaces(estimate)
+    lowPlaces <- ValuePlaces(lower)
+    upPlaces <- ValuePlaces(upper)
     
   } else {
-    
     # Round estimate and range using places
-    estValue <- round(estimate, places)
-    lowValue <- round(lower, places)
-    upValue <- round(upper, places)
+    estPlaces <- places
+    lowPlaces <- places
+    upPlaces <- places
   } 
   
   # Convert values and range into strings - TODO may need to add format as 
   # a variable to specify scientific notation. 
-  estStr <- formatC(estValue, big.mark = thousands, decimal.mark = decimal,
-    format = "fg")
-  lowStr <- ifelse(is.na(lowValue), "", formatC(lowValue, 
+  estStr <- formatC(estValue, digits = estPlaces, big.mark = thousands, 
+    decimal.mark = decimal, format = "fg")
+  lowStr <- ifelse(is.na(lowValue), "", formatC(lowValue, digits = lowPlaces,
     big.mark = thousands, decimal.mark = decimal, format = "fg"))
-  upStr <- ifelse(is.na(upValue), "", formatC(upValue, 
+  upStr <- ifelse(is.na(upValue), "", formatC(upValue, digits = upPlaces,
     big.mark = thousands, decimal.mark = decimal, format = "fg"))
   
   # Add suffixes and prefixes
