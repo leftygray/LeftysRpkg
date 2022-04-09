@@ -25,12 +25,11 @@
 #' @export
 #'
 PlotColors <- function(set = c("main", "lines", "cbPalette", "hivcascade4",
-  "hivcascade5", "crayons")) {
+  "hivcascade5", "crayons", "dracula")) {
 
   set <- match.arg(set)
 
   # Generate all the colour vector options -------------------------------------
-
 
   # Palette with black and grey (colour blind friendly)
   cbPalette <- c("#000000","#999999", "#E69F00", "#56B4E9", "#009E73",
@@ -176,6 +175,22 @@ PlotColors <- function(set = c("main", "lines", "cbPalette", "hivcascade4",
     "Yellow Green"="#c5e384",
     "Yellow Orange"="#ffae42")
 
+  # Setup dracula theme colours
+  # https://draculatheme.com/
+  # https://en.wikipedia.org/wiki/Dracula_(color_scheme)
+  dracula <- c("Background"="#282a36",
+    "Current Line"="#44475a",
+    "Foreground"="#f8f8f2",
+    "Comment"="#6272a4",
+    "Cyan"="#8be9fd",
+    "Green"="#50fa7b",
+    "Orange"="#ffb86c",
+    "Pink"="#ff79c6",
+    "Purple"="#bd93f9",
+    "Red"="#ff5555",
+    "Yellow"="#f1fa8c")
+  
+  
   # Main/general colours I use --------------------------------------------
 
   # The 10 main colours I like using
@@ -187,7 +202,6 @@ PlotColors <- function(set = c("main", "lines", "cbPalette", "hivcascade4",
   # than 5 lines in a line plot. Preferably less.
   lines <- crayons[c("Black", "Blue", "Red", "Green", "Orange")]
 
-
   # Generate and return final set of colours ------------------------------
   colours <- switch(match.arg(set),
     main=main,
@@ -195,10 +209,10 @@ PlotColors <- function(set = c("main", "lines", "cbPalette", "hivcascade4",
     cbPalette=cbPalette,
     hivcascade4=hivcascade4,
     hivcascade5=hivcascade5,
-    crayons=crayons)
+    crayons=crayons,
+    dracula=dracula)
 
   # Return final vector
   return(colours)
-
 
 }

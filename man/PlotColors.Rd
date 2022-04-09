@@ -5,7 +5,8 @@
 \title{Vectors of colors for my plots}
 \usage{
 PlotColors(
-  set = c("main", "lines", "cbPalette", "hivcascade4", "hivcascade5", "crayons")
+  set = c("main", "lines", "cbPalette", "hivcascade4", "hivcascade5", "crayons",
+    "dracula")
 )
 }
 \arguments{
