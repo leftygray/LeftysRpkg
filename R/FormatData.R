@@ -79,7 +79,7 @@ FormatData <- function(estimate, lower = NA, upper = NA, places = NULL,
   rangeappend <- match.arg(rangeappend)
   
   # Round values appropriately
-  if (is.null(places)) {
+  if (is.null(places[1])) {
     
     # Change depending on estimate value using a function
     ValuePlaces <- function(value) {
@@ -122,17 +122,17 @@ FormatData <- function(estimate, lower = NA, upper = NA, places = NULL,
     format = "f"))
   
   # Add suffixes and prefixes
-  if (units != "") {
+  if (units[1] != "") {
     estStr <- paste0(prefix, estStr, suffix, " ", units) 
   } else {
     estStr <- paste0(prefix, estStr, suffix)
   }
   
   # Setup range string
-  if (lowStr == "" && upStr == "") {
+  if (lowStr[1] == "" && upStr[1] == "") {
   # No range
    rangeString <- ""
-  } else if (upStr == "") {
+  } else if (upStr[1] == "") {
     # Only lower bound as a single value
     rangeString <- paste0(rangebracket[1], rangestr, prefix, lowStr, 
       suffix, rangebracket[2])
