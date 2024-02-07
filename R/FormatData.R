@@ -74,7 +74,7 @@ FormatData <- function(estimate, lower = NA, upper = NA, places = NULL,
   
   # Setup defaults - "mid" specifies a mid-line decimal
   decimal <- match.arg(decimal)
-  decimal <- ifelse(decimal == "low", ".", "\xB7")
+  decimal <- ifelse(decimal == "low", ".", "\U00B7")
   thousands <- match.arg(thousands)
   rangeappend <- match.arg(rangeappend)
   
@@ -90,7 +90,7 @@ FormatData <- function(estimate, lower = NA, upper = NA, places = NULL,
       } else if (value >= 10 && value < 1000) {
         places <- 1
       } else if (value >= 1000 && value < 10000) {
-        places - 0
+        places <- 0
       } else {
         places <- -2
       }
