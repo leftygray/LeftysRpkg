@@ -13,7 +13,7 @@ FormatData(
   suffix = "",
   units = "",
   rangestr = "",
-  rangeto = "-",
+  rangeto = "‒",
   rangebracket = c(" (", ")"),
   rangeappend = c("single", "both"),
   thousands = c(",", " "),
